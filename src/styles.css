@@ -1,0 +1,210 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-profit: var(--profit);
+  --color-loss: var(--loss);
+  --color-gold: var(--gold);
+  --color-crypto: var(--crypto);
+  --color-info: var(--info);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+}
+
+/* Dark theme = default (fintech trading terminal) */
+:root {
+  --radius: 0.75rem;
+
+  /* Core surfaces — #0B0E11 base, #131722 secondary, #1E2329 cards */
+  --background: oklch(0.18 0.012 260);              /* #0B0E11 */
+  --foreground: oklch(1 0 0);                        /* #FFFFFF */
+  --surface: oklch(0.22 0.018 260);                  /* #131722 */
+  --surface-elevated: oklch(0.255 0.018 260);        /* #1E2329 */
+
+  --card: oklch(0.255 0.018 260);
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0.255 0.018 260);
+  --popover-foreground: oklch(1 0 0);
+
+  /* Brand: Groww/Binance green */
+  --primary: oklch(0.72 0.18 155);                   /* #00C076 */
+  --primary-foreground: oklch(0.1 0 0);
+
+  --secondary: oklch(0.28 0.018 260);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.28 0.018 260);
+  --muted-foreground: oklch(0.78 0.012 260);         /* #B7BDC6 */
+  --accent: oklch(0.3 0.02 260);
+  --accent-foreground: oklch(1 0 0);
+
+  --destructive: oklch(0.62 0.22 25);                /* #EA3943 */
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(0.32 0.018 260);                   /* #2B3139 */
+  --input: oklch(0.3 0.018 260);
+  --ring: oklch(0.72 0.18 155);
+
+  /* Fintech semantic */
+  --profit: oklch(0.74 0.17 155);                    /* #16C784 */
+  --loss: oklch(0.62 0.22 25);                       /* #EA3943 */
+  --gold: oklch(0.78 0.15 80);                       /* #F5B301 */
+  --crypto: oklch(0.65 0.21 290);                    /* #7B61FF */
+  --info: oklch(0.62 0.21 260);                      /* #2962FF */
+
+  /* Sidebar (#11161D) */
+  --sidebar: oklch(0.2 0.014 260);
+  --sidebar-foreground: oklch(0.92 0.005 260);
+  --sidebar-primary: oklch(0.72 0.18 155);
+  --sidebar-primary-foreground: oklch(0.1 0 0);
+  --sidebar-accent: oklch(0.28 0.02 260);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.3 0.018 260);
+  --sidebar-ring: oklch(0.72 0.18 155);
+
+  /* Gradients & shadows */
+  --gradient-hero: radial-gradient(ellipse at 20% 0%, oklch(0.4 0.18 155 / 0.25), transparent 50%),
+                   radial-gradient(ellipse at 80% 30%, oklch(0.4 0.21 290 / 0.2), transparent 50%),
+                   linear-gradient(180deg, oklch(0.18 0.012 260), oklch(0.22 0.018 260));
+  --gradient-card: linear-gradient(135deg, oklch(0.27 0.02 260 / 0.8), oklch(0.22 0.018 260 / 0.6));
+  --gradient-profit: linear-gradient(135deg, oklch(0.72 0.18 155), oklch(0.6 0.16 165));
+  --gradient-gold: linear-gradient(135deg, oklch(0.82 0.15 80), oklch(0.68 0.15 60));
+
+  --shadow-glow: 0 0 40px oklch(0.72 0.18 155 / 0.25);
+  --shadow-card: 0 8px 24px oklch(0 0 0 / 0.4);
+  --shadow-elevated: 0 20px 60px -10px oklch(0 0 0 / 0.6);
+}
+
+/* Light theme */
+.light {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.15 0 0);
+  --surface: oklch(0.985 0.003 260);
+  --surface-elevated: oklch(1 0 0);
+  --card: oklch(0.985 0.003 260);
+  --card-foreground: oklch(0.15 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0 0);
+  --primary: oklch(0.7 0.18 158);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0.005 260);
+  --secondary-foreground: oklch(0.15 0 0);
+  --muted: oklch(0.96 0.005 260);
+  --muted-foreground: oklch(0.45 0.01 260);
+  --accent: oklch(0.95 0.008 260);
+  --accent-foreground: oklch(0.15 0 0);
+  --destructive: oklch(0.6 0.22 25);
+  --border: oklch(0.9 0.008 260);
+  --input: oklch(0.9 0.008 260);
+  --ring: oklch(0.7 0.18 158);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.15 0 0);
+  --sidebar-accent: oklch(0.96 0.005 260);
+  --sidebar-accent-foreground: oklch(0.15 0 0);
+  --sidebar-border: oklch(0.9 0.008 260);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "cv11", "ss01", "ss03";
+    -webkit-font-smoothing: antialiased;
+  }
+  html { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+}
+
+@layer utilities {
+  .text-profit { color: var(--profit); }
+  .text-loss { color: var(--loss); }
+  .text-gold { color: var(--gold); }
+  .text-crypto { color: var(--crypto); }
+  .bg-profit { background-color: var(--profit); }
+  .bg-loss { background-color: var(--loss); }
+  .bg-gold { background-color: var(--gold); }
+  .bg-crypto { background-color: var(--crypto); }
+  .bg-surface { background-color: var(--surface); }
+  .bg-surface-elevated { background-color: var(--surface-elevated); }
+  .border-profit { border-color: var(--profit); }
+  .border-loss { border-color: var(--loss); }
+
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-card { background: var(--gradient-card); }
+  .bg-gradient-profit { background: var(--gradient-profit); }
+  .bg-gradient-gold { background: var(--gradient-gold); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .ticker-track {
+    animation: ticker 60s linear infinite;
+  }
+  .price-flash-up { animation: flash-up 0.6s ease-out; }
+  .price-flash-down { animation: flash-down 0.6s ease-out; }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes flash-up {
+  0% { background-color: oklch(0.74 0.17 155 / 0.3); }
+  100% { background-color: transparent; }
+}
+@keyframes flash-down {
+  0% { background-color: oklch(0.62 0.22 25 / 0.3); }
+  100% { background-color: transparent; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px oklch(0.72 0.18 155 / 0.4); }
+  50% { box-shadow: 0 0 40px oklch(0.72 0.18 155 / 0.7); }
+}
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
