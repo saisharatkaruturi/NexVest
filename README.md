@@ -163,23 +163,59 @@ http://localhost:5173
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
-> Screenshots will be added soon.
+### Home Page
 
-Suggested screenshots:
+![Home](Screenshots_nexVest/homepage.png)
 
-* Landing Page
-* Dashboard
-* Portfolio
-* Market Overview
-* AI Assistant
-* Watchlist
-* Stocks
-* Crypto
-* Gold
-* Mobile View
+### Dashboard
 
+![Dashboard](Screenshots_nexVest/Dashboard.png)
+
+### Portfolio
+
+![Portfolio](Screenshots_nexVest/portfolio.png)
+
+### Analytics
+
+![Analytics](Screenshots_nexVest/Analytics.png)
+
+### AI Advisor
+
+![AI Advisor](Screenshots_nexVest/AI%20advisor.png)
+
+### Trading Terminal
+
+![Trading Terminal](Screenshots_nexVest/trading%20terminal.png)
+
+### Watchlist
+
+![Watchlist](Screenshots_nexVest/watchlist.png)
+
+### Crypto
+
+![Crypto](Screenshots_nexVest/crypto.png)
+
+### Gold & Silver
+
+![Gold & Silver](Screenshots_nexVest/gold%20and%20silver.png)
+
+### IPO
+
+![IPO](Screenshots_nexVest/ipo%20page.png)
+
+### Learn
+
+![Learn](Screenshots_nexVest/Learn.png)
+
+### News
+
+![News](Screenshots_nexVest/News.png)
+
+### Settings
+
+![Settings](Screenshots_nexVest/Settings.png)
 ---
 
 # 🎥 Demo
